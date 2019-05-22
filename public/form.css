@@ -1,0 +1,51 @@
+.job-container {
+    grid-template-columns: auto;
+    padding: 2em;
+    width: 30%;
+
+  }
+label {
+    font-weight: bold;
+}
+input[type='text'], input[type='email'], input[type='password'] {
+    width: calc(100% - 4em);
+    display: block;
+    padding: .5em;
+    margin-bottom: 20px;
+    border: 2px solid lightgray;
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #4CAF50;
+  }
+
+button {
+    padding: .5em;
+    background: #455668;
+    border: 0;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    background: yellow;
+    padding: .3em;
+    margin-bottom: 20px;
+}

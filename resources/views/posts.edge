@@ -1,0 +1,81 @@
+@layout('layouts.main')
+
+@section('title')
+JobPostr - Post your Video
+@endsection
+
+@section('extracss')
+{{ style('forms') }}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+@endsection
+
+@section('content')
+  <h1>Show Your Talent</h1>
+
+
+  <div class="job-container">
+    @if(flashMessage('message'))
+        <span>{{ flashMessage('message') }}</span>
+    @endif
+        <form action="{{ route('PostController.create') }}" method="POST" enctype="multipart/form-data" >
+          {{ csrfField() }}
+  
+          <label for="title">Post Title</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" style="border-top:none;border-left:none;border-right:none;border-bottom: solid 0.5px;border-color:grey;" name="title" value="{{ old('title', '') }}"><br><br>
+          @if(hasErrorFor('title'))
+              <span>
+                  {{ getErrorFor('title') }}
+              </span>
+          @endif
+  
+          <label for="link">Link URL</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input style="border-top:none;border-left:none;border-right:none;border-bottom: solid 0.5px;border-color:grey;" type="text" name="link" value="{{ old('link', '') }}"><br><br>
+          @if(hasErrorFor('link'))
+              <span>
+                  {{ getErrorFor('link') }}
+              </span>
+          @endif
+  
+          <label for="description">Description</label>
+          <input style="border-top:none;border-left:none;border-right:none;border-bottom: solid 0.5px;border-color:grey;" type="text" name="description"><br><br><br>
+          @if(hasErrorFor('description'))
+              <span>
+                  {{ getErrorFor('description') }}
+              </span>
+          @endif
+          <input type="file" name="profile_pic" ><br>
+
+<br>
+          <div class="w3-container">
+              <h2 id="uploadingfiles"></h2>
+              <div class="w3-light-grey">
+              <div id="myBar" class="w3-green" style="height:24px;width:0"></div>
+              </div>
+              <br>
+              <input type="radio" name="gender" value="music" checked>Music
+              <input type="radio" name="gender" value="dance"> Dance
+              <input type="radio" name="gender" value="pht"> Photography
+              <input type="radio" name="gender" value="write"> Writing
+              <br><br>
+
+          <button type="submit" onclick="move()">Share</button>
+        </form>
+        
+    </div>
+<br><br>
+<h2>My Posts</h2>
+
+  @each(post in posts)
+  <div class="job-container2">
+    <div class="blank"></div>
+    <div class="job-info">
+      <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      <p>{{ post.description }}</p>
+      <ul>
+          <li><a href="{{ route('PostController.delete', { id: post.id }) }}">Delete</a></li>
+          <li><a href="{{ route('PostController.edit', { id: post.id }) }}">Edit</a></li>
+      </ul>
+    </div>
+  </div>
+  @endeach
+@endsection

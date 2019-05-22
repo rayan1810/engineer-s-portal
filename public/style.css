@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: rgba(45,234,255,1);
+background: -moz-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(45,234,255,1)), color-stop(100%, rgba(143,39,37,1)));
+background: -webkit-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: linear-gradient(135deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2deaff', endColorstr='#8f2725', GradientType=1 );
+
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  
+ }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.parallax {
+  /* The image used */
+background: rgba(45,234,255,1);
+background: -moz-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(45,234,255,1)), color-stop(100%, rgba(143,39,37,1)));
+background: -webkit-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: linear-gradient(135deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2deaff', endColorstr='#8f2725', GradientType=1 );
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ul {
+  list-style-type: none;
+}
+.app-container{
+  width:90%;
+  /* height:90%; */
+  background: #ffff;
+  min-height: calc(100vh - 10vh); 
+  border-radius: 5px;
+  margin: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform .2s;
+  animation: open .5s;
+  animation-iteration-count: 1; 
+}
+.app-container:hover{
+  /* transform: scale(1.1);  */
+  /* animation: shake 0.1s;  */
+  /* animation: open 2s; */
+  
+  /* When the animation is finished, start again */
+  /* animation-iteration-count: 1;  */
+}
+.app-container:active{
+  /* transform: scale(1.1);  */
+}
+@keyframes open{
+  0% { transform: scale(0.1,0.1); }
+  50% { transform: scale(0.1,0.1); }
+  75% { transform: scale(0.1,1); }
+  100% { transform: scaleX(1,1);}
+  
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-0.5deg); }
+  20% { transform: translate(-3px, 0px) rotate(0.5deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(0.5deg); }
+  50% { transform: translate(-1px, 2px) rotate(-0.5deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-0.5deg); }
+  80% { transform: translate(-1px, -1px) rotate(0.5deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-0.5deg); }
+}
+header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #303C49;
+  display: grid;
+  grid-template-columns: 30% auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 1em;
+  margin: 0;
+  background: rgba(45,234,255,1);
+background: -moz-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(45,234,255,1)), color-stop(100%, rgba(143,39,37,1)));
+background: -webkit-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+background: linear-gradient(135deg, rgba(45,234,255,1) 0%, rgba(143,39,37,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2deaff', endColorstr='#8f2725', GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}.dropbtn {
+  background-color: #303C49;
+  color: lightgray;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #303C49;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #455668}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background: #455668;
+}
+nav {
+  justify-self: right;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: inline-block;
+}
+nav ul li a:hover {
+  background: #455668;
+}
+.container {
+  width: calc(100% - 4em);
+  padding: 2em;
+  margin-top: 2em;
+}
+h1 {
+  margin-bottom: 1em;
+}
+.job-container, .job-container2 {
+  text-align: center;
+  background: white;
+  border-radius: 7px;
+  padding: 1em;
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 100% ;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.blank {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}

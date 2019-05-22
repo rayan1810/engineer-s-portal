@@ -1,0 +1,19 @@
+@layout('layouts.main')
+@section('title')
+Engineer's Portal
+@endsection
+
+@section('content')
+  <h1> Recent Posts</h1>
+
+  @each(post in  posts)
+  <div class="job-container">
+  <div class="job-info">
+  <h3>{{post.title}}</h3><br>
+  <div> {{post.link}}</div>
+ 
+  <p>{{post.description}}</p>
+</div></div>
+@endeach
+@endsection
+
